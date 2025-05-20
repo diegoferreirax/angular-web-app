@@ -9,7 +9,7 @@ RUN pnpm run build
 
 FROM nginx:alpine
 
-COPY --from=builder /app/build/browser /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 
 EXPOSE 80
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
