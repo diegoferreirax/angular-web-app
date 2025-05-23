@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@use '@angular/material';
+@use 'theme-colors';
+
+html {
+  @include material.theme((
+    color: (
+      primary: theme-colors.$primary-palette,
+      tertiary: theme-colors.$tertiary-palette,
+      theme-type: dark,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+
+  @media (prefers-contrast: more) {
+    @include theme-colors.high-contrast-overrides(dark);
+  }
+}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
