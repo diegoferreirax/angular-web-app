@@ -70,6 +70,10 @@ Após iniciar o servidor (por PNPM ou Docker), acesse a aplicação no navegador
 http://localhost:4200
 ```
 
+> **Observação:**  
+> O projeto já está configurado para utilizar o **Prettier** como ferramenta de formatação de código.  
+> Para garantir que a formatação automática funcione corretamente no seu editor (VS Code), é recomendado instalar a extensão **Prettier**.
+
 ## 🧪 Testes da aplicação
 
 O projeto está configurado com o **Jest** para execução dos testes automatizados.  
