@@ -44,6 +44,7 @@ export class AppComponent {
 
   private readonly _mobileQuery: MediaQueryList;
   private readonly _mobileQueryListener: () => void;
+  private readonly dialog = inject(MatDialog);
 
   constructor() {
     const media = inject(MediaMatcher);
@@ -52,6 +53,16 @@ export class AppComponent {
     this.isMobile.set(this._mobileQuery.matches);
     this._mobileQueryListener = () => this.isMobile.set(this._mobileQuery.matches);
     this._mobileQuery.addEventListener('change', this._mobileQueryListener);
+  }
+
+  openDialog() {
+    this.dialog.open(DialogAlertComponent, {
+      width: '620px'
+    });
+  }
+
+  ngAfterViewInit(): void {
+    this.openDialog();
   }
 
   ngOnDestroy(): void {

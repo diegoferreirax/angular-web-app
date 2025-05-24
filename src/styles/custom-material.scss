@@ -10,6 +10,7 @@ $border-color: #3b3b3b;
   border-bottom: 1px solid $border-color !important;
 }
 
-.mat-mdc-nav-list .mat-mdc-list-item {
+.mat-mdc-nav-list .mat-mdc-list-item,
+.mat-drawer  {
   border-radius: inherit !important;
 }
