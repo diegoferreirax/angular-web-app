@@ -1,6 +1,6 @@
 # Angular Web App
 
-Projeto criado em Angular utilizando Typescript para implementações de diversas funcionalidades de âmbito geral, para fins de treinamento, estudos, atualizações e futuramente ser um template completo open source para o pessoal poder baixar utilizar e contribuir.
+Projeto criado em Angular utilizando Typescript para implementações de diversas funcionalidades de âmbito geral, para fins de treinamento, estudos, atualizações e futuramente ser um template completo open source para a comunidade baixar, utilizar e contribuir.
 
 Este projeto está hospedado utilizando **GitHub Actions** e pode ser acessado através da seguinte URL:  
 [https://diegoferreirax.github.io/angular-web-app](https://diegoferreirax.github.io/angular-web-app)    
