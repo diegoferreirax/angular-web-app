@@ -1,37 +1,13 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatButtonModule } from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatSelectModule } from '@angular/material/select';
-import { LayoutModule, MediaMatcher } from '@angular/cdk/layout';
+import { MatDialog } from '@angular/material/dialog';
+import { MediaMatcher } from '@angular/cdk/layout';
+import { DialogAlertComponent } from 'components/dialogs/dialog-alert/dialog-alert.component';
+import { MaterialModule } from 'modules/material.module';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    RouterLink,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatListModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatTooltipModule,
-    MatDividerModule,
-    MatBadgeModule,
-    MatSlideToggleModule,
-    MatSelectModule,
-    LayoutModule
-  ],
+  imports: [RouterOutlet, RouterLink, MaterialModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -63,6 +39,7 @@ export class AppComponent {
 
   private readonly _mobileQuery: MediaQueryList;
   private readonly _mobileQueryListener: () => void;
+  private readonly dialog = inject(MatDialog);
 
   constructor() {
     const media = inject(MediaMatcher);
@@ -71,6 +48,22 @@ export class AppComponent {
     this.isMobile.set(this._mobileQuery.matches);
     this._mobileQueryListener = () => this.isMobile.set(this._mobileQuery.matches);
     this._mobileQuery.addEventListener('change', this._mobileQueryListener);
+  }
+
+  openDialog() {
+    const dialogAlert = sessionStorage.getItem('dialogAlert');
+    if (!dialogAlert) {
+      this.dialog.open(DialogAlertComponent, {
+        width: '620px'
+      });
+      this.dialog.afterAllClosed.subscribe(() => {
+        sessionStorage.setItem('dialogAlert', 'closed');
+      });
+    }
+  }
+
+  ngAfterViewInit(): void {
+    this.openDialog();
   }
 
   ngOnDestroy(): void {

@@ -4,6 +4,11 @@
   "compileOnSave": false,
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "modules/*": ["./src/app/modules/*"],
+      "components/*": ["./src/app/components/*"],
+      "dialogs/*": ["./src/app/components/dialogs/*"]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,

@@ -15,7 +15,7 @@
       [mode]="isMobile() ? 'over' : 'side'"
       [fixedInViewport]="isMobile()"
       fixedTopGap="56"
-      opened="true"
+      [opened]="isMobile() ? false : true"
     >
       <mat-nav-list>
         @for (nav of fillerNav; track nav) {
@@ -24,6 +24,7 @@
             <mat-icon matListIcon>{{ nav.icon }}</mat-icon>
             {{ nav.name }}
           </div>
+          <mat-divider></mat-divider>
         </a>
         }
       </mat-nav-list>
