@@ -1,6 +1,7 @@
 @use '@angular/material';
 @use 'styles/theme-colors' as theme-colors;
-@use 'styles/index';
+@use 'styles/flex';
+@use 'styles/custom-material';
 
 html {
   @include material.theme(

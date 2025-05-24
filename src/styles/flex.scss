@@ -1,7 +1,7 @@
-@use 'spacings';
+@use 'spacings' as spacings;
 
 .flex-container {
   display: flex;
   align-items: center;
-  gap: spacing(1);
+  gap: spacings.spacing(1);
 }
