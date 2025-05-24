@@ -1,19 +1,26 @@
 @use '@angular/material';
-@use 'theme-colors';
+@use 'styles/theme-colors' as theme-colors;
+@use 'styles/flex';
+@use 'styles/custom-material';
 
 html {
-  @include material.theme((
-    color: (
-      primary: theme-colors.$primary-palette,
-      tertiary: theme-colors.$tertiary-palette,
-      theme-type: dark,
-    ),
-    typography: Roboto,
-    density: 0,
-  ));
+  @include material.theme(
+    (
+      color: (
+        primary: theme-colors.$primary-palette,
+        tertiary: theme-colors.$tertiary-palette,
+        theme-type: dark
+      ),
+      typography: Roboto,
+      density: 0
+    )
+  );
 
   @media (prefers-contrast: more) {
     @include theme-colors.high-contrast-overrides(dark);
   }
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

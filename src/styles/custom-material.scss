@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use 'theme-colors' as theme-colors;
+
+$border-color: map.get(theme-colors.$primary-palette, 25);
+
+.mat-drawer-side {
+  border-color: $border-color !important;
+  border-width: 1px;
+  border-radius: inherit !important;
+}
+
+.mat-toolbar.toolbar {
+  border-bottom: 1px solid $border-color !important;
+}
+
+.mat-mdc-nav-list .mat-mdc-list-item {
+  border-radius: inherit !important;
+}

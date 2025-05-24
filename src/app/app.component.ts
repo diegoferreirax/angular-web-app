@@ -30,7 +30,7 @@ import { LayoutModule, MediaMatcher } from '@angular/cdk/layout';
     MatBadgeModule,
     MatSlideToggleModule,
     MatSelectModule,
-    LayoutModule,
+    LayoutModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -46,7 +46,7 @@ export class AppComponent {
       name: 'About',
       icon: 'info',
       route: '/about'
-    },
+    }
   ];
 
   protected readonly fillerContent = Array.from(
@@ -56,7 +56,7 @@ export class AppComponent {
        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
   );
 
   protected readonly isMobile = signal(true);
@@ -76,5 +76,4 @@ export class AppComponent {
   ngOnDestroy(): void {
     this._mobileQuery.removeEventListener('change', this._mobileQueryListener);
   }
-
 }

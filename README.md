@@ -1,6 +1,6 @@
 # Angular Web App
 
-Projeto criado em Angular utilizando Typescript para implementações de diversas funcionalidades de âmbito geral, para fins de treinamento, estudos e atualizações.
+Projeto criado em Angular utilizando Typescript para implementações de diversas funcionalidades de âmbito geral, para fins de treinamento, estudos, atualizações e futuramente ser um template completo open source para o pessoal poder baixar utilizar e contribuir.
 
 Este projeto está hospedado utilizando **GitHub Actions** e pode ser acessado através da seguinte URL:  
 [https://diegoferreirax.github.io/angular-web-app](https://diegoferreirax.github.io/angular-web-app)    
@@ -69,6 +69,10 @@ Após iniciar o servidor (por PNPM ou Docker), acesse a aplicação no navegador
 ```
 http://localhost:4200
 ```
+
+> **Observação:**  
+> O projeto já está configurado para utilizar o **Prettier** como ferramenta de formatação de código.  
+> Para garantir que a formatação automática funcione corretamente no seu editor (VS Code), é recomendado instalar a extensão **Prettier**.
 
 ## 🧪 Testes da aplicação
 
