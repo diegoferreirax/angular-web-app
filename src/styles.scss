@@ -1,26 +1,24 @@
-@use '@angular/material';
-@use 'styles/theme-colors' as theme-colors;
-@use 'styles/flex';
+@use '@angular/material' as mat;
 @use 'styles/custom-material';
+@use 'styles/flex';
+
+$theme: (
+  color: (
+    primary: mat.$violet-palette,
+    tertiary: mat.$orange-palette,
+    theme-type: dark
+  ),
+  typography: Roboto,
+  density: 0
+);
+
+body {
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  margin: 0;
+
+  @include mat.theme($theme);
+}
 
 html {
-  @include material.theme(
-    (
-      color: (
-        primary: theme-colors.$primary-palette,
-        tertiary: theme-colors.$tertiary-palette,
-        theme-type: dark
-      ),
-      typography: Roboto,
-      density: 0
-    )
-  );
-
-  @media (prefers-contrast: more) {
-    @include theme-colors.high-contrast-overrides(dark);
-  }
-}
-body {
-  margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  height: 100%;
 }

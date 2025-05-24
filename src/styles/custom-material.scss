@@ -1,7 +1,4 @@
-@use 'sass:map';
-@use 'theme-colors' as theme-colors;
-
-$border-color: map.get(theme-colors.$primary-palette, 25);
+$border-color: #3b3b3b;
 
 .mat-drawer-side {
   border-color: $border-color !important;
