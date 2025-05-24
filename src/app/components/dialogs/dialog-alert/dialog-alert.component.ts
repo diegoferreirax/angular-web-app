@@ -6,13 +6,12 @@ import { MaterialModule } from 'modules/material.module';
   imports: [MaterialModule],
   template: `
     <mat-dialog-content>
+      <p>Olá! Seja bem-vindo ao Angular Web App.</p>
       <p>
-        Olá! Seja bem-vindo ao nosso site.
-        <br />
-        Pedimos desculpas pelo transtorno, mas este site está em construção.
-        <br />
-        Novas funcionalidades serão lançadas no decorrer do tempo. Agradecemos sua compreensão!
+        Pedimos desculpas pelo transtorno, mas o site está em construção. Novas funcionalidades
+        serão lançadas no decorrer do tempo.
       </p>
+      <p>Agradecemos sua compreensão!</p>
     </mat-dialog-content>
     <mat-dialog-actions align="end">
       <button mat-button mat-dialog-close>Ok</button>
