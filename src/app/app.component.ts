@@ -1,18 +1,13 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-
-import { DialogAlertComponent } from './components/dialogs/dialog-alert/dialog-alert.component';
 import { MatDialog } from '@angular/material/dialog';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { MaterialModule } from './modules/material.module';
+import { DialogAlertComponent } from 'components/dialogs/dialog-alert/dialog-alert.component';
+import { MaterialModule } from 'modules/material.module';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    RouterLink,
-    MaterialModule
-  ],
+  imports: [RouterOutlet, RouterLink, MaterialModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -56,9 +51,15 @@ export class AppComponent {
   }
 
   openDialog() {
-    this.dialog.open(DialogAlertComponent, {
-      width: '620px'
-    });
+    const dialogAlert = sessionStorage.getItem('dialogAlert');
+    if (!dialogAlert) {
+      this.dialog.open(DialogAlertComponent, {
+        width: '620px'
+      });
+      this.dialog.afterAllClosed.subscribe(() => {
+        sessionStorage.setItem('dialogAlert', 'closed');
+      });
+    }
   }
 
   ngAfterViewInit(): void {
