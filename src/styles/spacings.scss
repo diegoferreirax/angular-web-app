@@ -25,23 +25,3 @@ $spacing-unit: 10px;
 .pr-1 {
   padding-right: spacing(1);
 }
-
-.flex-container {
-  display: flex;
-  align-items: center;
-  gap: spacing(1);
-}
-
-.mat-drawer-side {
-  border-color: rgba(255, 255, 255, 0.12) !important;
-  border-width: 1px;
-  border-radius: inherit !important;
-}
-
-.mat-toolbar.toolbar {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-}
-
-.mat-mdc-nav-list .mat-mdc-list-item {
-  border-radius: inherit !important;
-}
