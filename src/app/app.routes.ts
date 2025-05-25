@@ -3,6 +3,10 @@ import { PageNotFoundComponent } from './common-pages/page-not-found/page-not-fo
 
 export const routes: Routes = [
   {
+    path: '',
+    loadComponent: () => import('./modules/dashboard/dashboard.component').then((c) => c.DashboardComponent)
+  },
+  {
     path: 'clients',
     loadComponent: () => import('./modules/client/client.component').then((c) => c.ClientComponent)
   },
