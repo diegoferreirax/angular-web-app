@@ -11,6 +11,19 @@ $border-color: #3b3b3b;
 }
 
 .mat-mdc-nav-list .mat-mdc-list-item,
-.mat-drawer  {
+.mat-drawer {
   border-radius: inherit !important;
+}
+
+.mat-mdc-icon-button img,
+.mat-mdc-icon-button svg {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 50%;
+  margin: -6px;
+}
+
+mat-sidenav.mat-drawer,
+mat-sidenav-content.mat-drawer-content {
+  width: 280px;
 }
