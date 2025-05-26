@@ -1,9 +1,10 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, inject, signal, ViewChild } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogAlertComponent } from 'components/dialogs/dialog-alert/dialog-alert.component';
 import { MaterialModule } from 'modules/material.module';
 import { MediaMatcher } from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'layout',
@@ -12,6 +13,8 @@ import { MediaMatcher } from '@angular/cdk/layout';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {
+  @ViewChild('snav') snav!: MatSidenav;
+
   protected readonly fillerNav = [
     {
       name: 'Clients',
@@ -37,6 +40,8 @@ export class LayoutComponent {
 
   protected readonly isMobile = signal(true);
   private readonly dialog = inject(MatDialog);
+  protected isLightTheme: boolean = false;
+  protected username: string = 'User';
 
   private readonly _mobileQuery: MediaQueryList;
   private readonly _mobileQueryListener: () => void;
@@ -59,6 +64,17 @@ export class LayoutComponent {
         sessionStorage.setItem('dialogAlert', 'closed');
       });
     }
+  }
+
+  onCloseMenu = () => {
+    if (this.isMobile()) {
+      this.snav.close();
+    }
+  };
+
+  toggleTheme() {
+    this.isLightTheme = !this.isLightTheme;
+    document.body.classList.toggle('light-mode', this.isLightTheme);
   }
 
   ngAfterViewInit(): void {
