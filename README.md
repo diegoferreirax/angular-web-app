@@ -7,6 +7,15 @@ Este projeto está hospedado utilizando **GitHub Actions** e pode ser acessado a
 
 Na pasta `.github/workflows` contém o arquivo `deploy.yml` com as configurações de publicação com **GitHub Actions**.     
 
+## 🚀 Features
+
+- [Angular v19](https://angular.dev)
+- [Typescript](https://www.typescriptlang.org)
+- [Angular Material](https://material.angular.dev/components/categories)
+- [Angular Material CDK](https://material.angular.dev/cdk/categories)
+- [Dark/Light Theme](https://material.angular.dev/guide/theming#supporting-light-and-dark-mode)
+- Template responsivo com [Sidenav](https://material.angular.dev/components/sidenav/overview) e [Toolbar](https://material.angular.dev/components/toolbar/overview)
+
 ## ⚙️ Configuração ambiente
 
 Para configurar o ambiente de desenvolvimento, siga os passos abaixo:
@@ -48,7 +57,7 @@ Para configurar o ambiente de desenvolvimento, siga os passos abaixo:
      cd angular-web-app
      ```
 
-## 🚀 Rodar projeto
+## ▶️ Rodar projeto
 
 Você pode rodar o projeto de duas formas:
 

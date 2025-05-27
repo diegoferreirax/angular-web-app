@@ -1,6 +1,31 @@
 {
   "homepage": "https://diegoferreirax.github.io/angular-web-app",
   "name": "angular-web-app",
+  "description": "Free material angular template with Angular Material",
+  "keywords": [
+    "dashboard",
+    "angular",
+    "admin template",
+    "angular material",
+    "dark",
+    "light",
+    "dark and light",
+    "google material design",
+    "ng",
+    "angular"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegoferreirax/angular-web-app"
+  },
+  "bugs": {
+    "url": "https://github.com/diegoferreirax/angular-web-app/issues"
+  },
+  "engines": {
+    "node": ">=22.14.0",
+    "pnpm": ">=10.7.1"
+  },
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

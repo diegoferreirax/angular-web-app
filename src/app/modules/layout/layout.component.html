@@ -9,17 +9,17 @@
     <span class="spacer"></span>
 
     <button
+      aria-label="Trocar tema"
       mat-icon-button
       (click)="toggleTheme()"
-      aria-label="Trocar tema"
     >
-      <mat-icon>
+      <mat-icon aria-hidden="false">
         {{ isLightTheme ? 'dark_mode' : 'light_mode' }}
       </mat-icon>
     </button>
 
-    <button mat-icon-button>
-      <mat-icon matBadge="8">notifications</mat-icon>
+    <button mat-icon-button aria-label="notificações">
+      <mat-icon matBadge="8" aria-hidden="false">notifications</mat-icon>
     </button>
 
     <div class="flex-container g-1 user-profile">
@@ -31,9 +31,9 @@
     </div>
 
     <button
+      aria-label="Example icon-button with a menu"
       mat-icon-button
       [matMenuTriggerFor]="menu"
-      aria-label="Example icon-button with a menu"
     >
       <mat-icon>more_vert</mat-icon>
     </button>
