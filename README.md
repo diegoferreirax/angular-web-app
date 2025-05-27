@@ -5,7 +5,7 @@ Projeto criado em Angular utilizando Typescript para implementações de diversa
 Este projeto está hospedado utilizando **GitHub Actions** e pode ser acessado através da seguinte URL:  
 [https://diegoferreirax.github.io/angular-web-app](https://diegoferreirax.github.io/angular-web-app)    
 
-Na pasta `.github/workflows` contém o arquivo `deploy.yml` com as configurações de publicação com **GitHub Actions**. No mesmo, há também configurações de variáveis secrets configuradas internamente no repositório para maior segurança.     
+Na pasta `.github/workflows` contém o arquivo `deploy.yml` com as configurações de publicação com **GitHub Actions**.     
 
 ## 🚀 Features
 
