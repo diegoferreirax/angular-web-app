@@ -23,7 +23,7 @@
     </button>
 
     <div class="flex-container g-1 user-profile">
-      <p class="fs-1">{{username}}</p>
+      <p class="fs-1">{{ username }}</p>
       <img
         src="https://i.pravatar.cc/32"
         alt="Avatar do usuário"
@@ -64,10 +64,29 @@
     >
       <mat-nav-list>
         @for (nav of fillerNav; track nav) {
-        <a mat-list-item [routerLink]="nav.route" (click)="onCloseMenu()">
+        <a
+          mat-list-item
+          [routerLink]="nav.route"
+          (click)="onCloseMenu()"
+          routerLinkActive="active-menu"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           <div class="flex-container g-1">
-            <mat-icon matListIcon>{{ nav.icon }}</mat-icon>
-            {{ nav.name }}
+            <mat-icon
+              matListIcon
+              [ngClass]="{
+                'active-icon': isActiveRoute(nav.route)
+              }"
+            >
+              {{ nav.icon }}
+            </mat-icon>
+            <span
+              [ngClass]="{
+                'active-text': isActiveRoute(nav.route)
+              }"
+            >
+              {{ nav.name }}
+            </span>
           </div>
           <mat-divider></mat-divider>
         </a>

@@ -21,21 +21,37 @@
 
       img {
         border-radius: 50%;
-      }	
+      }
     }
 
     .user-profile:hover {
-        cursor: pointer;
+      cursor: pointer;
 
-        background-color: var(
-          --mdc-protected-button-hover-state-layer-color,
-          rgba(60, 60, 60, 0.08)
-        );
-      }
+      background-color: var(
+        --mdc-protected-button-hover-state-layer-color,
+        rgba(60, 60, 60, 0.12)
+      );
+    }
   }
 
   .sidenav-container {
     flex: 1;
+
+    .active-menu,
+    a.mat-list-item.active-menu {
+      background: var(
+        --mdc-list-item-selected-state-layer-color,
+        rgba(60, 60, 60, 0.12)
+      );
+    }
+
+    .active-icon {
+      color: var(--mdc-theme-primary, #1976d2) !important;
+    }
+
+    .active-text {
+      color: var(--mdc-theme-primary, #1976d2) !important;
+    }
   }
 }
 
