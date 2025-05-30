@@ -56,7 +56,7 @@ export class LayoutComponent {
     this._mobileQuery.addEventListener('change', this._mobileQueryListener);
   }
 
-  openDialog() {
+  openDialog = () => {
     const dialogAlert = sessionStorage.getItem('dialogAlert');
     if (!dialogAlert) {
       this.dialog.open(DialogAlertComponent, {
@@ -74,12 +74,12 @@ export class LayoutComponent {
     }
   };
 
-  toggleTheme() {
+  toggleTheme = () => {
     this.isLightTheme = !this.isLightTheme;
     document.body.classList.toggle('light-mode', this.isLightTheme);
   }
 
-  isActiveRoute(route: string): boolean {
+  isActiveRoute = (route: string): boolean => {
     return this.router.isActive(route, {
       paths: 'exact',
       queryParams: 'ignored',
@@ -88,11 +88,11 @@ export class LayoutComponent {
     });
   }
 
-  ngAfterViewInit(): void {
+  ngAfterViewInit = (): void => {
     this.openDialog();
   }
 
-  ngOnDestroy(): void {
+  ngOnDestroy = (): void => {
     this._mobileQuery.removeEventListener('change', this._mobileQueryListener);
   }
 }
