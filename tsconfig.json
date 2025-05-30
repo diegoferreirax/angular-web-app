@@ -5,9 +5,10 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "paths": {
-      "modules/*": ["./src/app/modules/*"],
       "components/*": ["./src/app/components/*"],
-      "dialogs/*": ["./src/app/components/dialogs/*"]
+      "core/*": ["./src/app/core/*"],
+      "features/*": ["./src/app/features/*"],
+      "modules/*": ["./src/app/modules/*"],
     },
     "strict": true,
     "noImplicitOverride": true,
