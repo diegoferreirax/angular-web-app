@@ -1,9 +1,9 @@
 <mat-nav-list>
-  @for (nav of navegations; track nav) {
+  @for (nav of menuService.navegations; track nav) {
   <a
     mat-list-item
     routerLinkActive="active-menu"
-    (click)="onCloseMenu()"
+    (click)="menuService.toggleMobileMenu()"
     [routerLink]="nav.route"
     [routerLinkActiveOptions]="{ exact: true }"
   >

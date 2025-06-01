@@ -1,10 +1,10 @@
 <mat-toolbar class="toolbar flex-container g-2">
-  <button mat-icon-button (click)="onToggleMenuEvent()">
-    <mat-icon>menu</mat-icon>
+  <button mat-icon-button (click)="menuService.toggleMenu()">
+    <mat-icon>{{ menuService.menuOpened() ? 'menu_open' : 'menu' }}</mat-icon>
   </button>
   
   <img class="app-image" src="assets/angular.svg" alt="Angular" routerLink="/" />
-  @if (!isMobile) {
+  @if (!menuService.isMobile()) {
   <h1 class="app-name" routerLink="/">Angular Web App</h1>
   }
   <span class="spacer"></span>

@@ -1,21 +1,17 @@
-<div class="container" [class.is-mobile]="isMobile()">
-  <app-toolbar
-    [isMobile]="isMobile()"
-    (toggleMenuEvent)="snav.toggle()"
-  ></app-toolbar>
+<div class="container" [class.is-mobile]="menuService.isMobile()">
+  <app-toolbar></app-toolbar>
 
   <mat-sidenav-container class="sidenav-container">
     <mat-sidenav
       #snav
       fixedTopGap="56"
-      [mode]="isMobile() ? 'over' : 'side'"
-      [fixedInViewport]="isMobile()"
-      [opened]="isMobile() ? false : true"
+      [mode]="menuService.isMobile() ? 'over' : 'side'"
+      [fixedInViewport]="menuService.isMobile()"
+      [opened]="menuService.isMobile() ? false : true"
+      (closedStart)="onSidenavClosed()"
     >
       <div class="sidebar-navegation">
-        <app-navegation
-          (closeMenuEvent)="onCloseMenu()"
-        ></app-navegation>
+        <app-navegation></app-navegation>
         <mat-divider
           class="sidebar-navegation-divider"
         ></mat-divider>
