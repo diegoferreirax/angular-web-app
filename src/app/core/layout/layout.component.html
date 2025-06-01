@@ -1,97 +1,27 @@
 <div class="container" [class.is-mobile]="isMobile()">
-  <mat-toolbar class="toolbar flex-container g-2">
-    <button mat-icon-button (click)="snav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    @if (!isMobile()) {
-    <h1 class="app-name">Angular Web App</h1>
-    }
-    <span class="spacer"></span>
+  <app-toolbar
+    [isMobile]="isMobile()"
+    (toggleMenuEvent)="snav.toggle()"
+  ></app-toolbar>
 
-    <button
-      aria-label="Trocar tema"
-      mat-icon-button
-      (click)="toggleTheme()"
-    >
-      <mat-icon aria-hidden="false">
-        {{ isLightTheme ? 'dark_mode' : 'light_mode' }}
-      </mat-icon>
-    </button>
-
-    <button mat-icon-button aria-label="Notificações">
-      <mat-icon matBadge="8" aria-hidden="false">notifications</mat-icon>
-    </button>
-
-    <div class="flex-container g-1 user-profile">
-      <p class="fs-1">{{ username }}</p>
-      <img
-        src="https://i.pravatar.cc/32"
-        alt="Avatar do usuário"
-      />
-    </div>
-
-    <button
-      aria-label="Example icon-button with a menu"
-      mat-icon-button
-      [matMenuTriggerFor]="menu"
-    >
-      <mat-icon>more_vert</mat-icon>
-    </button>
-
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item>
-        <span>Settings</span>
-      </button>
-      <button mat-menu-item>
-        <span>Support</span>
-      </button>
-      <button mat-menu-item>
-        <span>F.A.Q.</span>
-      </button>
-    </mat-menu>
-  </mat-toolbar>
-
-  <mat-sidenav-container
-    class="sidenav-container"
-    [style.marginTop.px]="isMobile() ? 56 : 0"
-  >
+  <mat-sidenav-container class="sidenav-container">
     <mat-sidenav
       #snav
+      fixedTopGap="56"
       [mode]="isMobile() ? 'over' : 'side'"
       [fixedInViewport]="isMobile()"
-      fixedTopGap="56"
       [opened]="isMobile() ? false : true"
     >
-      <mat-nav-list>
-        @for (nav of fillerNav; track nav) {
-        <a
-          mat-list-item
-          [routerLink]="nav.route"
-          (click)="onCloseMenu()"
-          routerLinkActive="active-menu"
-          [routerLinkActiveOptions]="{ exact: true }"
-        >
-          <div class="flex-container g-1">
-            <mat-icon
-              matListIcon
-              [ngClass]="{
-                'active-icon': isActiveRoute(nav.route)
-              }"
-            >
-              {{ nav.icon }}
-            </mat-icon>
-            <span
-              [ngClass]="{
-                'active-text': isActiveRoute(nav.route)
-              }"
-            >
-              {{ nav.name }}
-            </span>
-          </div>
-          <mat-divider></mat-divider>
-        </a>
-        }
-      </mat-nav-list>
+      <div class="sidebar-navegation">
+        <app-navegation
+          (closeMenuEvent)="onCloseMenu()"
+        ></app-navegation>
+        <mat-divider
+          class="sidebar-navegation-divider"
+        ></mat-divider>
+      </div>
+
+      <app-footer></app-footer>
     </mat-sidenav>
 
     <mat-sidenav-content>

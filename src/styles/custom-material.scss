@@ -1,9 +1,16 @@
-$border-color: #3b3b3b;
+$border-color: var(
+  --mdc-protected-button-hover-state-layer-color,
+  rgba(60, 60, 60, 50%)
+);
 
 .mat-drawer-side {
   border-color: $border-color !important;
   border-width: 1px;
   border-radius: inherit !important;
+}
+
+.mat-divider {
+  border-color: $border-color !important;
 }
 
 .mat-toolbar.toolbar {
@@ -21,4 +28,10 @@ $border-color: #3b3b3b;
   height: 35px !important;
   border-radius: 50%;
   margin: -6px;
+}
+
+.mat-drawer-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

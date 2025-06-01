@@ -9,6 +9,7 @@
       "core/*": ["./src/app/core/*"],
       "features/*": ["./src/app/features/*"],
       "modules/*": ["./src/app/modules/*"],
+      "assets/*": ["./src/assets/*"],
     },
     "strict": true,
     "noImplicitOverride": true,

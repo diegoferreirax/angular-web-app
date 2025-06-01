@@ -7,50 +7,16 @@
   left: 0;
   right: 0;
 
-  .toolbar {
-    h1.app-name {
-      margin-left: 8px;
-    }
-
-    .spacer {
-      flex: 1 1 auto;
-    }
-
-    .user-profile {
-      padding: var(--mdc-menu-container-padding, 0px 8px);
-
-      img {
-        border-radius: 50%;
-      }
-    }
-
-    .user-profile:hover {
-      cursor: pointer;
-
-      background-color: var(
-        --mdc-protected-button-hover-state-layer-color,
-        rgba(60, 60, 60, 0.12)
-      );
-    }
-  }
-
   .sidenav-container {
     flex: 1;
 
-    .active-menu,
-    a.mat-list-item.active-menu {
-      background: var(
-        --mdc-list-item-selected-state-layer-color,
-        rgba(60, 60, 60, 0.12)
-      );
-    }
+    .sidebar-navegation {
+      overflow: auto;
 
-    .active-icon {
-      color: var(--mdc-theme-primary, #1976d2) !important;
-    }
-
-    .active-text {
-      color: var(--mdc-theme-primary, #1976d2) !important;
+      .sidebar-navegation-divider {
+        width: 95%;
+        margin: 0 auto;
+      }
     }
   }
 }
@@ -58,10 +24,5 @@
 .is-mobile {
   .sidenav-container {
     flex: 1 0 auto;
-  }
-
-  .toolbar {
-    position: fixed;
-    z-index: 2;
   }
 }
