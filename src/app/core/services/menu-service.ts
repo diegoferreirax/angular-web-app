@@ -1,4 +1,5 @@
 import { Injectable, signal } from '@angular/core';
+import { NavegationMenuItem } from 'core/layout/navegation/navegation.type';
 import { Subject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
@@ -9,7 +10,7 @@ export class MenuService {
   readonly isMobile = signal(false);
   readonly menuOpened = signal(true);
 
-  readonly navegations = [
+  readonly navegations: NavegationMenuItem[] = [
     {
       name: 'Clients',
       icon: 'person',
