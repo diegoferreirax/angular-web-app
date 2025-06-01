@@ -1,0 +1,30 @@
+<mat-nav-list>
+  @for (nav of navegations; track nav) {
+  <a
+    mat-list-item
+    routerLinkActive="active-menu"
+    (click)="onCloseMenu()"
+    [routerLink]="nav.route"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <div class="flex-container g-1">
+      <mat-icon
+        matListIcon
+        [ngClass]="{
+          'active-icon': isActiveRoute(nav.route)
+        }"
+      >
+        {{ nav.icon }}
+      </mat-icon>
+      <span
+        [ngClass]="{
+          'active-text': isActiveRoute(nav.route)
+        }"
+      >
+        {{ nav.name }}
+      </span>
+    </div>
+    <mat-divider></mat-divider>
+  </a>
+  }
+</mat-nav-list>
