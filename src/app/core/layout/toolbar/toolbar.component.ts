@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { MenuService } from 'core/services/menu-service';
 import { MaterialModule } from 'modules/material.module';
 
 @Component({
@@ -10,18 +11,13 @@ import { MaterialModule } from 'modules/material.module';
   styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent {
-  @Input() isMobile: boolean = false;
-  @Output() toggleMenuEvent = new EventEmitter<null>();
+  protected readonly menuService = inject(MenuService);
 
-  protected username: string = 'User';
+  protected readonly username: string = 'User';
   protected isLightTheme: boolean = false;
 
   toggleTheme(): void {
     this.isLightTheme = !this.isLightTheme;
     document.body.classList.toggle('light-mode', this.isLightTheme);
-  }
-
-  onToggleMenuEvent(): void {
-    this.toggleMenuEvent.emit();
   }
 }
