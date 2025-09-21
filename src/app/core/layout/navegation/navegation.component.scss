@@ -6,10 +6,19 @@ a.mat-list-item.active-menu {
   );
 }
 
-.active-icon {
-  color: var(--mdc-theme-primary, #1976d2) !important;
+a.mat-mdc-list-item {
+  padding: var(--mat-sys-corner-large) 23px;
+
+  .active-icon {
+    color: var(--mdc-theme-primary, #1976d2) !important;
+  }
+
+  .active-text {
+    color: var(--mdc-theme-primary, #1976d2) !important;
+  }
 }
 
-.active-text {
-  color: var(--mdc-theme-primary, #1976d2) !important;
+.submenu {
+  padding-left: 32px;
+  background: transparent;
 }

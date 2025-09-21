@@ -13,6 +13,7 @@ import { MaterialModule } from 'modules/material.module';
 export class NavegationComponent {
   private readonly router = inject(Router);
   protected readonly menuService = inject(MenuService);
+  public expandedIndex: number | null = null;
 
   protected isActiveRoute(route: string): boolean {
     return this.router.isActive(route, {
@@ -21,5 +22,9 @@ export class NavegationComponent {
       fragment: 'ignored',
       matrixParams: 'ignored'
     });
+  }
+
+  public toggleSubmenu(index: number) {
+    this.expandedIndex = this.expandedIndex === index ? null : index;
   }
 }

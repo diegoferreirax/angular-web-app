@@ -6,7 +6,7 @@
     {
       "files": "*.html",
       "options": {
-        "printWidth": 60
+        "printWidth": 80
       }
     },
     {
