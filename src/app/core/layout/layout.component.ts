@@ -1,5 +1,5 @@
 import { Component, inject, ViewChild } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { RouterOutlet } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
@@ -14,11 +14,10 @@ import { MenuService } from 'core/services/menu-service';
   imports: [
     RouterOutlet,
     MaterialModule,
-    CommonModule,
     NavegationComponent,
     ToolbarComponent,
     FooterComponent
-  ],
+],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
