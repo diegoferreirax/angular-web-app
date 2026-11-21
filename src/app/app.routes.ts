@@ -14,6 +14,5 @@ export const routes: Routes = [
     path: 'about',
     loadComponent: () => import('./features/about/about.component').then((c) => c.AboutComponent)
   },
-  { path: '', redirectTo: 'clients', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

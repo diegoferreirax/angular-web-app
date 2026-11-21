@@ -1,0 +1,109 @@
+.container {
+  mat-divider.mat-divider.mat-divider-horizontal {
+    margin: 20px 0 !important;
+  }
+
+  .client-container {
+    position: relative;
+    height: 550px;
+    overflow: auto;
+    justify-content: center;
+    width: 100%;
+
+    .mat-spinner-table {
+      position: absolute;
+      margin-top: 90px;
+      z-index: 2;
+    }
+
+    table {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 0 8px;
+
+    mat-divider.mat-divider.mat-divider-horizontal {
+      margin: 12px 0 !important;
+    }
+
+    .client-container {
+      height: min(68vh, 520px);
+      min-height: 420px;
+      align-items: flex-start;
+      border-radius: 8px;
+
+      table {
+        background: transparent;
+
+        .mat-mdc-header-row {
+          display: none;
+        }
+
+        .mat-mdc-row {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 0;
+          height: auto;
+          margin: 8px;
+          border: 1px solid rgba(0, 0, 0, 0.12);
+          border-radius: 8px;
+          overflow: hidden;
+        }
+
+        .mat-mdc-cell {
+          display: flex;
+          min-width: 0;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 10px 12px;
+          border: 0;
+          overflow-wrap: anywhere;
+
+          &::before {
+            content: attr(data-label);
+            margin-bottom: 4px;
+            font-size: 11px;
+            font-weight: 500;
+            text-transform: uppercase;
+          }
+
+          &.mobile-name,
+          &.mobile-cpf {
+            grid-column: 1 / -1;
+          }
+
+          &.mobile-name {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+            font-size: 16px;
+            font-weight: 600;
+          }
+        }
+
+        .mat-mdc-no-data-row {
+          display: block;
+
+          td {
+            display: block;
+            padding: 24px 16px;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    mat-paginator {
+      width: 100%;
+
+      .mat-mdc-paginator-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        min-height: 56px;
+        padding: 8px 0;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-<mat-toolbar class="toolbar flex-container g-2">
+<mat-toolbar class="toolbar flex-align-items g-2">
   <button mat-icon-button (click)="menuService.toggleMenu()">
     <mat-icon>{{ menuService.menuOpened() ? 'menu_open' : 'menu' }}</mat-icon>
   </button>
@@ -25,7 +25,7 @@
     </mat-icon>
   </button>
 
-  <div class="flex-container g-1 user-profile">
+  <div class="flex-align-items g-1 user-profile">
     <p class="fs-1">{{ username }}</p>
     <img
       src="https://i.pravatar.cc/32"

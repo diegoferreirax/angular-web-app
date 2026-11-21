@@ -25,6 +25,7 @@ export class NavegationComponent {
   }
 
   public toggleSubmenu(index: number) {
+    this.menuService.toggleMobileMenu();
     this.expandedIndex = this.expandedIndex === index ? null : index;
   }
 }
