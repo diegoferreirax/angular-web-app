@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@angular/cdk':
-        specifier: 19.2.16
-        version: 19.2.16(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
+        specifier: 20.2.14
+        version: 20.2.14(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/common':
         specifier: ^20.3.35
         version: 20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
@@ -24,8 +24,8 @@ importers:
         specifier: ^20.3.35
         version: 20.3.35(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/platform-browser@20.3.35(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1)))(rxjs@7.8.2)
       '@angular/material':
-        specifier: 19.2.16
-        version: 19.2.16(2771643dd84c8180ee720df659abf8c8)
+        specifier: 20.2.14
+        version: 20.2.14(f85935083f33ef0b7db68dc89d03fbb1)
       '@angular/platform-browser':
         specifier: ^20.3.35
         version: 20.3.35(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))
@@ -264,11 +264,11 @@ packages:
       vitest:
         optional: true
 
-  '@angular/cdk@19.2.16':
-    resolution: {integrity: sha512-67nbWqoiZIBc8nEaCn7GHd02bM5T9qAbJ5w+Zq4V19CL3oCtrCrS4CV3Lsoi5HETSmn4iZcYS/Dph8omCvNkew==}
+  '@angular/cdk@20.2.14':
+    resolution: {integrity: sha512-7bZxc01URbiPiIBWThQ69XwOxVduqEKN4PhpbF2AAyfMc/W8Hcr4VoIJOwL0O1Nkq5beS8pCAqoOeIgFyXd/kg==}
     peerDependencies:
-      '@angular/common': ^19.0.0 || ^20.0.0
-      '@angular/core': ^19.0.0 || ^20.0.0
+      '@angular/common': ^20.0.0 || ^21.0.0
+      '@angular/core': ^20.0.0 || ^21.0.0
       rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/cli@20.3.43':
@@ -320,14 +320,14 @@ packages:
       '@angular/platform-browser': 20.3.35
       rxjs: ^6.5.3 || ^7.4.0
 
-  '@angular/material@19.2.16':
-    resolution: {integrity: sha512-SSky/3MBOTdCBWOEffmVdnnKaCX6T4r3CqK2TJCLqWsHarPz5jovYIacfOe1RJzXijmDxXK5+VYhS64PNJaa6g==}
+  '@angular/material@20.2.14':
+    resolution: {integrity: sha512-IbAgV6XLsvmHiJzxycVhcNC1PA4M30qi+ERCOir6cT333Bxm8vDV32gsOjfL52uzG5YRARroPC+8s1XqR2oxeA==}
     peerDependencies:
-      '@angular/cdk': 19.2.16
-      '@angular/common': ^19.0.0 || ^20.0.0
-      '@angular/core': ^19.0.0 || ^20.0.0
-      '@angular/forms': ^19.0.0 || ^20.0.0
-      '@angular/platform-browser': ^19.0.0 || ^20.0.0
+      '@angular/cdk': 20.2.14
+      '@angular/common': ^20.0.0 || ^21.0.0
+      '@angular/core': ^20.0.0 || ^21.0.0
+      '@angular/forms': ^20.0.0 || ^21.0.0
+      '@angular/platform-browser': ^20.0.0 || ^21.0.0
       rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/platform-browser-dynamic@20.3.35':
@@ -3631,9 +3631,6 @@ packages:
   parse5-sax-parser@8.0.1:
     resolution: {integrity: sha512-6eHc4FeWwv8uBX1yMZ8Vl5zcT61k8EpK/rgRwNl/BLY4pOkUqXI1RIwGSIvxyBXzl5TGj4TvIQBJGwTU4P+ddg==}
 
-  parse5@7.3.0:
-    resolution: {integrity: sha512-IInvU7fabl34qmi9gY8XOVxhYyMyuH2xUNpb2q8/Y+7552KlejkRvqvD19nMoUW/uQGGbqNpA6Tufu5FL5BZgw==}
-
   parse5@8.1.1:
     resolution: {integrity: sha512-EcR/6WDcU7b2N3vQSxKALCk9lXGtUMQxXio008OEMBE0kavu/7JLfBEeFPzi43nMqVDSbEn3QCK+BMCc9zO//w==}
 
@@ -4832,11 +4829,11 @@ snapshots:
       - tsx
       - yaml
 
-  '@angular/cdk@19.2.16(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)':
+  '@angular/cdk@20.2.14(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)':
     dependencies:
       '@angular/common': 20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/core': 20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1)
-      parse5: 7.3.0
+      parse5: 8.1.1
       rxjs: 7.8.2
       tslib: 2.9.1
 
@@ -4908,9 +4905,9 @@ snapshots:
       rxjs: 7.8.2
       tslib: 2.9.1
 
-  '@angular/material@19.2.16(2771643dd84c8180ee720df659abf8c8)':
+  '@angular/material@20.2.14(f85935083f33ef0b7db68dc89d03fbb1)':
     dependencies:
-      '@angular/cdk': 19.2.16(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
+      '@angular/cdk': 20.2.14(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/common': 20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2)
       '@angular/core': 20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1)
       '@angular/forms': 20.3.35(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(@angular/platform-browser@20.3.35(@angular/common@20.3.35(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1))(rxjs@7.8.2))(@angular/core@20.3.35(@angular/compiler@20.3.35)(rxjs@7.8.2)(zone.js@0.15.1)))(rxjs@7.8.2)
@@ -8442,10 +8439,6 @@ snapshots:
   parse5-sax-parser@8.0.1:
     dependencies:
       parse5: 8.1.1
-
-  parse5@7.3.0:
-    dependencies:
-      entities: 6.0.1
 
   parse5@8.1.1:
     dependencies:
