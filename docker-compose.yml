@@ -1,7 +1,7 @@
 services:
   angular-web-app:
     container_name: angular-web-app
-    image: 20-alpine
+    image: 22-alpine
     build:
       context: .
       dockerfile: ./Dockerfile
