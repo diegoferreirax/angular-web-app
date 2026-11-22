@@ -8,44 +8,48 @@
         (click)="toggleSubmenu(i);"
         [routerLink]="!nav.children.length ? nav.route : null"
         [routerLinkActiveOptions]="{ exact: true }"
-      >
-        <div class="flex-container g-1">
+        >
+        <div class="flex-align-items g-1">
           <mat-icon
             matListIcon
             [ngClass]="{ 'active-icon': isActiveRoute(nav.route) }"
-          >
+            >
             {{ nav.icon }}
           </mat-icon>
           <span
             [ngClass]="{ 'active-text': isActiveRoute(nav.route) }"
-          >
+            >
             {{ nav.name }}
           </span>
-          <mat-icon style="margin-left:auto;" *ngIf="nav.children?.length">
-            {{ expandedIndex === i ? 'expand_less' : 'expand_more' }}
-          </mat-icon>
+          @if (nav.children.length) {
+            <mat-icon style="margin-left:auto;">
+              {{ expandedIndex === i ? 'expand_less' : 'expand_more' }}
+            </mat-icon>
+          }
         </div>
         <mat-divider></mat-divider>
       </a>
 
-      <div
-        *ngIf="nav.children?.length && expandedIndex === i"
-        class="submenu"
-      >
-        <a
-          mat-list-item
-          *ngFor="let child of nav.children"
-          [routerLink]="child.route"
-          [routerLinkActiveOptions]="{ exact: true }"
-          routerLinkActive="active-menu"
-          (click)="menuService.toggleMobileMenu();"
-        >
-          <div class="flex-container g-1">
-            <mat-icon matListIcon [ngClass]="{ 'active-icon': isActiveRoute(child.route) }">{{ child.icon }}</mat-icon>
-            <span [ngClass]="{ 'active-text': isActiveRoute(child.route) }">{{ child.name }}</span>
-          </div>
-        </a>
-      </div>
+      @if (nav.children.length && expandedIndex === i) {
+        <div
+          class="submenu"
+          >
+          @for (child of nav.children; track child) {
+            <a
+              mat-list-item
+              [routerLink]="child.route"
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLinkActive="active-menu"
+              (click)="menuService.toggleMobileMenu();"
+              >
+              <div class="flex-align-items g-1">
+                <mat-icon matListIcon [ngClass]="{ 'active-icon': isActiveRoute(child.route) }">{{ child.icon }}</mat-icon>
+                <span [ngClass]="{ 'active-text': isActiveRoute(child.route) }">{{ child.name }}</span>
+              </div>
+            </a>
+          }
+        </div>
+      }
     </ng-container>
   }
 </mat-nav-list>

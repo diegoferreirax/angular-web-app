@@ -13,6 +13,12 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatCardModule } from '@angular/material/card';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   imports: [
@@ -28,6 +34,13 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSlideToggleModule,
     MatSelectModule,
     MatDialogModule,
+    MatCardModule,
+    MatChipsModule,
+    MatTableModule,
+    MatPaginator,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
     LayoutModule
   ],
   exports: [
@@ -43,7 +56,14 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSlideToggleModule,
     MatSelectModule,
     MatDialogModule,
+    MatCardModule,
+    MatChipsModule,
+    MatTableModule,
+    MatPaginator,
+    MatPaginatorModule,
+    MatSortModule,
+    MatProgressSpinnerModule,
     LayoutModule
   ]
 })
-export class MaterialModule {}
+export class MaterialModule { }

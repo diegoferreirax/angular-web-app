@@ -10,6 +10,7 @@
       "features/*": ["./src/app/features/*"],
       "modules/*": ["./src/app/modules/*"],
       "assets/*": ["./src/assets/*"],
+      "environment/*": ["./src/environments/*"],
     },
     "strict": true,
     "noImplicitOverride": true,

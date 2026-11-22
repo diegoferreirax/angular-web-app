@@ -1,0 +1,20 @@
+<nav [attr.aria-label]="ariaLabel()">
+  <ol class="flex-align-items g-1">
+    @for (item of items(); track item; let last = $last; let first = $first) {
+      <li>
+        <ng-template [ngTemplateOutlet]="item.templateRef" />
+      </li>
+      @if (!last) {
+        <li aria-hidden="true">
+          @if (separatorTemplateRef()) {
+            <ng-template
+              [ngTemplateOutlet]="separatorTemplateRef()!.templateRef"
+            />
+          } @else {
+            <mat-icon class="align-middle">chevron_right</mat-icon>
+          }
+        </li>
+      }
+    }
+  </ol>
+</nav>

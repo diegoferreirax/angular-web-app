@@ -1,4 +1,14 @@
-.flex-container {
+.flex {
+  display: flex;
+}
+
+.flex-align-items {
   display: flex;
   align-items: center;
+}
+
+.flex-align-justify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

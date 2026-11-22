@@ -1,1 +1,48 @@
-<p>about works!</p>
+<div class="container">
+  <div>Sobre o projeto</div>
+  <mat-divider></mat-divider>
+
+  <section class="about-intro">
+    <h2>Angular Web App</h2>
+    <p>
+      Template base para aplicações web administrativas, com a estrutura que se repete em
+      quase todo sistema: navegação, tema, listagem de dados e organização do código por
+      funcionalidade. Serve de ponto de partida para novos projetos.
+    </p>
+  </section>
+
+  <section class="about-features">
+    @for (feature of features; track feature.title) {
+      <mat-card appearance="outlined">
+        <mat-card-header>
+          <mat-icon mat-card-avatar>{{ feature.icon }}</mat-icon>
+          <mat-card-title>{{ feature.title }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ feature.description }}</p>
+        </mat-card-content>
+      </mat-card>
+    }
+  </section>
+
+  <section class="about-section">
+    <h3>Tecnologias</h3>
+    <mat-chip-set aria-label="Tecnologias usadas no projeto">
+      @for (technology of technologies; track technology) {
+        <mat-chip>{{ technology }}</mat-chip>
+      }
+    </mat-chip-set>
+  </section>
+
+  <section class="about-section">
+    <h3>Links</h3>
+    <div class="flex g-2 about-links">
+      @for (link of links; track link.url) {
+        <a mat-stroked-button [href]="link.url" target="_blank" rel="noopener noreferrer">
+          <mat-icon>{{ link.icon }}</mat-icon>
+          {{ link.label }}
+        </a>
+      }
+    </div>
+  </section>
+</div>
