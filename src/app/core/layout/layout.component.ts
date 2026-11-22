@@ -1,4 +1,4 @@
-import { Component, inject, ViewChild, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 
 import { RouterOutlet } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
@@ -19,7 +19,6 @@ import { MenuService } from 'core/services/menu-service';
     FooterComponent
 ],
   templateUrl: './layout.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent {

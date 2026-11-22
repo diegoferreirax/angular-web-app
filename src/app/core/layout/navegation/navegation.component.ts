@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { MenuService } from 'core/services/menu-service';
 import { MaterialModule } from 'modules/material.module';
@@ -8,7 +8,6 @@ import { MaterialModule } from 'modules/material.module';
   selector: 'app-navegation',
   imports: [RouterLink, MaterialModule, RouterLinkActive, CommonModule],
   templateUrl: './navegation.component.html',
-  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './navegation.component.scss'
 })
 export class NavegationComponent {
