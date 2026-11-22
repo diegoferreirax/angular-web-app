@@ -1,4 +1,4 @@
-import { Component, effect, inject, ViewChild } from '@angular/core';
+import { Component, effect, inject, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { MaterialModule } from 'modules/material.module';
 import { Client } from './types/client.type';
 import { MatTableDataSource } from '@angular/material/table';
@@ -11,6 +11,7 @@ import { ClientController } from './controller/client-controller';
   selector: 'app-client',
   imports: [MaterialModule],
   templateUrl: './client.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './client.component.scss'
 })
 export class ClientComponent {

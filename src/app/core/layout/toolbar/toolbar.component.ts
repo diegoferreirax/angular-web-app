@@ -1,5 +1,5 @@
 
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { MenuService } from 'core/services/menu-service';
 import { MaterialModule } from 'modules/material.module';
@@ -8,6 +8,7 @@ import { MaterialModule } from 'modules/material.module';
   selector: 'app-toolbar',
   imports: [MaterialModule, RouterLink],
   templateUrl: './toolbar.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './toolbar.component.scss'
 })
 export class ToolbarComponent {

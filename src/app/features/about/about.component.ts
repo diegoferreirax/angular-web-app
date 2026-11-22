@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MaterialModule } from 'modules/material.module';
 
 type AboutFeature = {
@@ -17,6 +17,7 @@ type AboutLink = {
   selector: 'app-about',
   imports: [MaterialModule],
   templateUrl: './about.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './about.component.scss'
 })
 export class AboutComponent {

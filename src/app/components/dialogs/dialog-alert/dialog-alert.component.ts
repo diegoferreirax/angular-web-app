@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { MaterialModule } from 'modules/material.module';
 
 @Component({
@@ -17,6 +17,7 @@ import { MaterialModule } from 'modules/material.module';
       <button mat-button mat-dialog-close>Ok</button>
     </mat-dialog-actions>
   `,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './dialog-alert.component.scss'
 })
 export class DialogAlertComponent {}
